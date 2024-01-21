@@ -8,7 +8,13 @@ module.exports = {
      title: 'Development', //Change to another title after dev
     }),
   ],
-  devtool: 'inline-source-map',
+  devtool: 'inline-source-map', //Remove after dev
+  devServer: { //Remove after dev
+    static: './dist',
+  },
+  optimization: { //Maybe remove after dev? Does it help with loading?
+    runtimeChunk: 'single',
+  },
   output: {
     filename: 'bundle.js', // Output bundle file
     path: path.resolve(__dirname, 'dist'), // Output folder
